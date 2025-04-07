@@ -1,0 +1,522 @@
+Object-Oriented Programming (OOP) in C# follows the principles of encapsulation, inheritance, polymorphism, and abstraction. Below are some MCQs to test your knowledge of OOP concepts in C#.
+
+
+---
+
+MCQs on OOP in C#
+
+1. Which of the following is NOT a pillar of OOP?
+
+A) Encapsulation
+B) Inheritance
+C) Compilation
+D) Polymorphism
+
+✅ Answer: C) Compilation
+
+
+---
+
+2. What is encapsulation in C#?
+
+A) Hiding the internal details and showing only functionality
+B) Deriving a class from another class
+C) Writing multiple methods with the same name but different parameters
+D) Using the abstract keyword
+
+✅ Answer: A) Hiding the internal details and showing only functionality
+
+
+---
+
+3. Which access specifier allows a class member to be accessed only within the same class?
+
+A) Public
+B) Private
+C) Protected
+D) Internal
+
+✅ Answer: B) Private
+
+
+---
+
+4. What is the keyword used to inherit a class in C#?
+
+A) extends
+B) implements
+C) inherits
+D) : (colon)
+
+✅ Answer: D) : (colon)
+
+
+---
+
+5. Which type of class cannot be instantiated in C#?
+
+A) Static class
+B) Abstract class
+C) Sealed class
+D) Both A and B
+
+
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+The abstract keyword is used for classes and methods:
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).
+An abstract class can have both abstract and regular methods:
+
+
+abstract class Animal 
+{
+  public abstract void animalSound();
+  public void sleep() 
+  {
+    Console.WriteLine("Zzz");
+  }
+}
+
+✅ Answer: D) Both A and B
+
+
+---
+
+6. What is polymorphism in C#?
+
+A) The ability to take multiple forms
+B) The process of creating a class
+C) The process of hiding implementation details
+D) A way to inherit multiple classes
+
+✅ Answer: A) The ability to take multiple forms
+
+
+---
+
+7. Which of the following statements about interfaces in C# is true?
+
+A) Interfaces can have method implementations
+B) A class can inherit multiple interfaces
+C) Interfaces can have constructors
+D) A class can inherit only one interface
+
+✅ Answer: B) A class can inherit multiple interfaces
+
+
+---
+
+8. What will happen if a class is declared as sealed in C#?
+
+--> Sealed classes are best used for scenarios when: Limited class inheritance is desired: 
+
+A) It cannot be instantiated
+B) It cannot be inherited
+C) It cannot have constructors
+D) It cannot have properties
+
+✅ Answer: B) It cannot be inherited
+
+
+---
+
+9. Which of the following best describes an abstract class?
+
+A) A class that cannot have any members
+B) A class that must be inherited and cannot be instantiated
+C) A class that contains only static methods
+D) A class that does not support constructors
+
+✅ Answer: B) A class that must be inherited and cannot be instantiated
+
+
+---
+
+10. Which of the following is NOT true about constructors in C#?
+
+A) A constructor can be overloaded
+B) A constructor has the same name as the class
+C) A constructor can return a value
+D) A constructor is automatically called when an object is created
+
+✅ Answer: C) A constructor can return a value
+
+
+---
+
+Would you like more questions, or do you need explanations for any of the answers?
+
+Complete Guide to Object-Oriented Programming (OOP) in C#
+
+Object-Oriented Programming (OOP) in C# is a programming paradigm that is based on the concepts of classes and objects. It helps in building modular, reusable, and maintainable code.
+
+
+---
+
+1. Key Concepts of OOP in C#
+
+OOP in C# is based on four main principles:
+
+A) Encapsulation
+
+Encapsulation is the concept of hiding the internal details of an object and only exposing what is necessary.
+
+✅ Key Features:
+
+Protects data using access modifiers (private, public, protected, internal).
+
+Prevents accidental modifications.
+
+Achieved using properties, methods, and private fields.
+
+
+Example:
+
+class Person
+{
+    private string name; // Encapsulated field
+
+    public string Name // Property to access private field
+    {
+        get { return name; }
+        set { name = value; }
+    }
+}
+
+
+---
+
+B) Inheritance
+
+Inheritance allows a class (child class) to inherit properties and methods from another class (parent class).
+
+✅ Key Features:
+
+Promotes code reusability.
+
+Uses the ":" (colon) symbol in C#.
+
+Supports single and multi-level inheritance but not multiple inheritance (use interfaces for that).
+
+
+Example:
+
+class Animal
+{
+    public void Eat() { Console.WriteLine("Eating..."); }
+}
+
+class Dog : Animal // Dog inherits from Animal
+{
+    public void Bark() { Console.WriteLine("Barking..."); }
+}
+
+
+---
+
+C) Polymorphism
+
+Polymorphism allows one interface to multiple implementations. It can be achieved using method overloading and method overriding.
+
+✅ Types of Polymorphism:
+
+1. Compile-time polymorphism (Method Overloading)
+
+
+2. Run-time polymorphism (Method Overriding)
+
+
+
+Method Overloading (Same method name, different parameters):
+
+class MathOperations
+{
+    public int Add(int a, int b) { return a + b; }
+    public double Add(double a, double b) { return a + b; }
+}
+
+Method Overriding (Parent and child classes have the same method name):
+
+class Parent
+{
+    public virtual void Show() { Console.WriteLine("Parent method"); }
+}
+
+class Child : Parent
+{
+    public override void Show() { Console.WriteLine("Child method"); }
+}
+
+
+---
+
+D) Abstraction
+
+Abstraction hides implementation details and only shows essential features. It is achieved using abstract classes and interfaces.
+
+✅ Key Features:
+Data abstraction is the process of hiding certain details and showing only essential information to the user.
+Abstraction can be achieved with either abstract classes or interfaces (which you will learn more about in the next chapter).
+
+The abstract keyword is used for classes and methods:
+
+Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the derived class (inherited from).
+An abstract class can have both abstract and regular methods:
+
+
+Abstract classes can have abstract and non-abstract methods.
+
+Interfaces only contain method declarations (no implementation).
+
+
+Example:
+
+abstract class Vehicle
+{
+    public abstract void Start();
+}
+
+--> for abstraction we use virtual-override or abstract-override 
+
+--> if i remove abstract from here, error= must declare a body because it is not marked abstract, extern, or partial
+class Car : Vehicle
+{
+    public override void Start() { Console.WriteLine("Car started"); }
+}
+
+
+---
+
+2. Other OOP Features in C#
+
+A) Classes and Objects
+
+A class is a blueprint for creating objects.
+An object is an instance of a class.
+
+Example:
+
+class Car
+{
+    public string Model;
+    public void Drive() { Console.WriteLine("Driving..."); }
+}
+
+// Creating an object
+Car myCar = new Car();
+myCar.Model = "Tesla";
+myCar.Drive();
+
+
+---
+
+B) Interfaces in C#
+
+Interfaces define a contract that classes must follow.
+
+Example:
+
+interface IAnimal
+{
+    void Speak();
+}
+
+class Dog : IAnimal
+{
+    public void Speak() { Console.WriteLine("Bark!"); }
+}
+
+
+---
+
+C) Constructors in C#
+
+A constructor is a special method called when an object is created.
+
+Example:
+
+class Car
+{
+    public Car() { Console.WriteLine("Car object created"); }
+}
+Car myCar = new Car(); // Output: Car object created
+
+
+---
+
+D) Access Modifiers in C#
+
+
+---
+
+3. 50 OOP MCQ Questions with Answers
+
+Encapsulation and Classes
+
+1. What is the primary goal of encapsulation?
+
+A) To achieve inheritance
+
+B) To hide implementation details
+
+C) To implement polymorphism
+
+D) To improve performance
+✅ Answer: B) To hide implementation details
+
+
+
+2. Which access modifier restricts access only within the same class?
+
+A) public
+
+B) private
+
+C) protected
+
+D) internal
+✅ Answer: B) private
+
+
+
+
+
+---
+
+Inheritance
+
+3. Which symbol is used for inheritance in C#?
+
+A) :
+
+B) ->
+
+C) extends
+
+D) implements
+✅ Answer: A) :
+
+
+
+4. Which of the following statements is true about multiple inheritance in C#?
+
+A) C# supports multiple inheritance
+
+B) Multiple inheritance is not allowed in C#
+
+C) Multiple inheritance can be achieved using interfaces
+
+D) Both B and C
+✅ Answer: D) Both B and C
+
+
+
+
+
+---
+
+Polymorphism
+
+5. Method Overloading is an example of:
+
+A) Runtime polymorphism
+
+B) Compile-time polymorphism
+
+C) Inheritance
+
+D) Abstraction
+✅ Answer: B) Compile-time polymorphism
+
+
+
+6. Which keyword is used to override a method in C#?
+
+A) override
+
+B) new
+
+C) virtual
+
+D) static
+✅ Answer: A) override
+
+
+
+
+
+---
+
+Abstraction and Interfaces
+
+7. An abstract class can have:
+
+A) Only abstract methods
+
+B) Only concrete methods
+
+C) Both abstract and concrete methods
+
+D) Only static methods
+✅ Answer: C) Both abstract and concrete methods
+
+
+
+8. What is the default access modifier of an interface method in C#?
+
+A) private
+
+B) protected
+
+C) public
+
+D) internal
+✅ Answer: C) public
+
+
+
+
+
+---
+
+Miscellaneous
+
+9. Which of the following statements is true about constructors in C#?
+
+A) A constructor must have a return type
+
+B) A constructor cannot be overloaded
+
+C) A constructor initializes an object
+
+
+D) A constructor can be called explicitly
+✅ Answer: C) A constructor initializes an object
+
+
+
+10. Which feature of OOP allows one class to inherit another?
+
+
+
+A) Encapsulation
+
+B) Inheritance
+
+C) Polymorphism
+
+D) Abstraction
+✅ Answer: B) Inheritance
+
+
+
+---
+
+I have provided 10 MCQs here. Do you want all 50 MCQs, or should I structure them differently?
+
